@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <AssemblyName>Update_repository_tool</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <OutputType>WinExe</OutputType>
+    <UseWindowsForms>True</UseWindowsForms>
+    <TargetFramework>net451</TargetFramework>
+    <Prefer32Bit>True</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>Preview</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="xmldatabase.Resources.Jira.SDK.dll" />
+    <None Remove="xmldatabase.Resources.MsgReade.dll" />
+    <None Remove="xmldatabase.Resources.Newtonso.dll" />
+    <None Remove="xmldatabase.Resources.RestShar.dll" />
+    <EmbeddedResource Include="xmldatabase.Resources.Jira.SDK.dll" />
+    <EmbeddedResource Include="xmldatabase.Resources.MsgReade.dll" />
+    <EmbeddedResource Include="xmldatabase.Resources.Newtonso.dll" />
+    <EmbeddedResource Include="xmldatabase.Resources.RestShar.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Jira.SDK" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="MsgReader" />
+  </ItemGroup>
+</Project>
